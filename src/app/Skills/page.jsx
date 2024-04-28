@@ -1,20 +1,19 @@
-function SkillPic(params) {
+import SkillPic from "@/components/Skill-First"; 
+import Footer from "@/components/Footer"; 
+
+function Skill(params) {
     return(
-        <div className="grid grid-cols-4  grid-rows-2 justify-items-center items-center ">
-            
-            <img src="https://via.placeholder.com/170x70" className="rounded-2xl m-4"></img>
-            <img src="https://via.placeholder.com/170x70" className="rounded-2xl m-4"></img>
-            <img src="https://via.placeholder.com/170x70" className="rounded-2xl m-4"></img>
-            <img src="https://via.placeholder.com/170x70" className="rounded-2xl m-4"></img>
-            <img src="https://via.placeholder.com/170x70" className="rounded-2xl m-4"></img>
-            <img src="https://via.placeholder.com/170x70" className="rounded-2xl m-4"></img>
-            <img src="https://via.placeholder.com/170x70" className="rounded-2xl m-4"></img>
-            <img src="https://via.placeholder.com/170x70" className="rounded-2xl m-4"></img>
-            
-            
-            
-           
+        <div className="flex flex-col">
+            <div className="mb-96">
+            <SkillPic/>
+            </div>
+            <div className="mt-44">
+            <Footer />
+           </div>
+
         </div>
+        
+
     )
 }
-export default SkillPic;
+export default Skill;

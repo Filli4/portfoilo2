@@ -19,7 +19,7 @@ function Navbar() {
     <Link href="Projects" className="text-gray-800 hover:text-blue-600 transition duration-300">Projects</Link>
     <Link href="About" className="text-gray-800 hover:text-blue-600 transition duration-300">About Me</Link>
     <Link href="Skills" className="text-gray-800 hover:text-blue-600 transition duration-300">Skills</Link>
-    <Link href="Contact" className="text-gray-800 hover:text-blue-600 transition duration-300">Contact</Link>
+
   </nav>
 </div>
 

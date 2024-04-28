@@ -1,20 +1,17 @@
-function SkillPic(params) {
+import Footer from "@/components/Footer"; 
+import React from 'react';
+function Skill(params) {
     return(
-        <div className="grid grid-cols-4  grid-rows-2 justify-items-center items-center ">
+        <div>
             
-            <img src="https://via.placeholder.com/170x70" className="rounded-2xl m-4"></img>
-            <img src="https://via.placeholder.com/170x70" className="rounded-2xl m-4"></img>
-            <img src="https://via.placeholder.com/170x70" className="rounded-2xl m-4"></img>
-            <img src="https://via.placeholder.com/170x70" className="rounded-2xl m-4"></img>
-            <img src="https://via.placeholder.com/170x70" className="rounded-2xl m-4"></img>
-            <img src="https://via.placeholder.com/170x70" className="rounded-2xl m-4"></img>
-            <img src="https://via.placeholder.com/170x70" className="rounded-2xl m-4"></img>
-            <img src="https://via.placeholder.com/170x70" className="rounded-2xl m-4"></img>
-            
-            
+          
+
+              <div className=" pt-80 ">
+                <Footer/>
+              </div>
             
            
         </div>
     )
 }
-export default SkillPic;
+export default Skill;
