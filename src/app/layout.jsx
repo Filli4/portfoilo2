@@ -1,17 +1,29 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Nav";
+import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Filmon-Portfolio",
   description: "My portfolio",
 };
 
+const inter = Inter({ subsets: ["latin"] });
+
+
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        
+        <Navbar/>
+        
+        {children}
+
+        
+      </body>
     </html>
   );
 }
