@@ -13,8 +13,8 @@ function Home() {
       
       
       <Hero/>
-      <h1 className='text-2xl font-semibold m-4'>Here are some of projects i did. </h1>
-      <p className='text-gray-600 m-4 w-2/4'>I just want to show some of the projects i did here on the front page. You can go to <b><i>projects</i></b> page on the navbar if you want to see more or just hit the <b><i>More Info</i></b> to take you there.</p>
+      <h1 className='text-2xl font-semibold m-4'>Here are some of projects i did&rsquo;</h1>
+      <p className='text-gray-600 m-4 w-2/4'>I just want to show some of the projects i did here on the front page&rsquo; You can go to <b><i>projects</i></b> page on the navbar if you want to see more or just hit the <b><i>More Info</i></b> to take you there&rsquo;</p>
       <Cards/>
       <Footer />
       

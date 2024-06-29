@@ -14,7 +14,7 @@ export default function About(params) {
   <div className="grid grid-cols-1 gap-4">
   <h1 className="text-3xl font-bold m-6 bg-gray-200 rounded-full p-9 border-x-lime-300   border-x-2 text-center">Hello! My Name Is Filmon & Welcome To My Website</h1>
   <div className='flex justify-between border-red-300  border-2 mx-2 rounded-2xl'>
-    <p className="text-lg text-gray-800 w-2/5 flex-wrap p-2 h-fit mx-24 my-32">Currently I&apos;m a student, studying FrontEnd at <b>Chasacademy</b> school. I like React and would like to learn more about it.</p>
+    <p className="text-lg text-gray-800 w-2/5 flex-wrap p-2 h-fit mx-24 my-32">Currently I&apos;m a student&lsquo; studying FrontEnd at <b>Chasacademy</b> school&rsquo; I like React and would like to learn more about it&rsquo;</p>
     <img src="https://via.placeholder.com/800" alt="placeholder" className="w-96 rounded-2xl m-4" />
   </div>
 </div>
