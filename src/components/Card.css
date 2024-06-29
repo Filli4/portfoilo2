@@ -1,0 +1,38 @@
+.popout-container {
+    position: fixed;
+    padding: 20px;
+    width: 177%;
+    height: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.26); /* Optional: to provide a dark overlay background */
+  }
+  
+  .details {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .details p {
+    padding: 10px;
+  }
+  
+  .details button {
+    cursor: pointer;
+    align-self: flex-end;
+    padding: 10px;
+  }
+  
+  .details button:hover {
+    background-color: rgb(218, 27, 52);
+    border-radius: 10px;
+  }
+  

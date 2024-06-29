@@ -6,9 +6,7 @@ function Skill(params) {
             
           
 
-              <div className=" pt-80 ">
-                <Footer/>
-              </div>
+              
             
            
         </div>

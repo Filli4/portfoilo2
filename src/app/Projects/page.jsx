@@ -6,10 +6,10 @@ export default function About(params) {
 
 
   return(
-    <div>
+    <div className="grid grid-rows-span-2 gap-7">
     <Cards/>
-    <div className="mt-28">
-      <Footer/>
+    <div className=" content-end  row-span-4 ">
+    <Footer />
     </div>
     
     </div>
