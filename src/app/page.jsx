@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 
 function Home() {
   return (
-    <div>
+    <div className='flex justify-center items-center flex-col flex-wrap '>
       
       
       <Hero/>
