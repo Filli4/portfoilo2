@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.26); /* Optional: to provide a dark overlay background */
+    background-color: rgba(0, 0, 0, 0.26); 
   }
   
   .details {

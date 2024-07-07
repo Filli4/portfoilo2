@@ -19,8 +19,9 @@ function Cards(params) {
 
 
 
-       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 mt-8 mb-4 
-       ">
+       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4  mt-8 mb-4 
+       mx-2 xl:grid-cols-4">
+
     <div  className="bg-white rounded-lg shadow-md p-4 ">
       <img src="https://via.placeholder.com/400" alt="Card Image" className="w-full mb-4  rounded-t-lg " />
       <h2 className="text-xl font-semibold mb-4">To Do List</h2>
