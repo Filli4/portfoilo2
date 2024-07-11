@@ -20,12 +20,12 @@ function Cards(params) {
 
 
        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4  mt-8 mb-4 
-       mx-2 xl:grid-cols-4">
+       mx-2 xl:grid-cols-4 ">
 
-    <div  className="bg-white rounded-lg shadow-md p-4 ">
+    <div  className="bg-white dark:bg-gray-700/[30%] dark:border-x-4 dark:rounded-3xl dark:border-lime-200/35  rounded-lg shadow-md p-4 ">
       <img src="https://via.placeholder.com/400" alt="Card Image" className="w-full mb-4  rounded-t-lg " />
       <h2 className="text-xl font-semibold mb-4">To Do List</h2>
-      <p className="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit&rsquo; Eligendi suscipit quia illo quo at ad&rsquo;</p>
+      <p className="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit&rsquo; Eligendi suscipit quia illo quo at ad&rsquo;</p>
       
       <div className=" grid grid-cols-2 justify-items-center items-end">
       
@@ -35,7 +35,7 @@ function Cards(params) {
          <div className="details flex flex-col justify-center items-center ml-16">
            <div className="bg-white rounded-t-md p-4">
              <h2 className="text-xl font-semibold mb-4">To Do List</h2>
-             <p className="text-gray-600 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit Eligendi suscipit quia illo quo at ad</p>
+             <p className="text-gray-600 mb-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit Eligendi suscipit quia illo quo at ad</p>
              <button className="font-semibold text-l bg-slate-400 px-4 py-2 rounded" onClick={toggleDetails}>Close</button>
            </div>
          </div>
@@ -48,10 +48,10 @@ function Cards(params) {
       </Link></div>
     </div>
     
-    <div  className="bg-white rounded-lg shadow-md p-4 ">
+    <div  className="bg-white rounded-lg shadow-md p-4 dark:bg-gray-700/[30%] dark:border-x-4 dark:rounded-3xl dark:border-lime-200/35 ">
       <img src="https://via.placeholder.com/400" alt="Card Image" className="w-full mb-4  rounded-t-lg " />
       <h2 className="text-xl font-semibold mb-4">Todo-List</h2>
-      <p id="" className="text-gray-600 text-wrap min-h-28">In this project i did a todo list&rsquo; it&apos;s a simple project for a quick list you want to do&rsquo; 
+      <p id="" className="text-gray-600 text-wrap min-h-28 dark:text-gray-300">In this project i did a todo list&rsquo; it&apos;s a simple project for a quick list you want to do&rsquo; 
                                    You can Add a list&lsquo; you can hit the done button or even remove the list that you want&rsquo;   </p>
     
       <div className=" grid grid-cols-2 justify-items-center items-end">
@@ -63,10 +63,10 @@ function Cards(params) {
       </Link></div>
     </div>    
     
-    <div  className="bg-white rounded-lg shadow-md p-4 ">
+    <div  className="bg-white rounded-lg shadow-md p-4 dark:bg-gray-700/[30%] dark:border-x-4 dark:rounded-3xl dark:border-lime-200/35 ">
       <img src="https://via.placeholder.com/400" alt="Card Image" className="w-full mb-4  rounded-t-lg " />
       <h2 className="text-xl font-semibold mb-4">Black-Jack</h2>
-      <p className="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit Eligendi suscipit quia illo quo at ad</p>
+      <p className="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit Eligendi suscipit quia illo quo at ad</p>
     
       <div className=" grid grid-cols-2 justify-items-center items-end">
       <Link href="/Projects"> 
@@ -78,10 +78,10 @@ function Cards(params) {
     </div>  
 
     
-    <div  className="bg-white rounded-lg shadow-md p-4 ">
+    <div  className="bg-white rounded-lg shadow-md p-4 dark:bg-gray-700/[30%] dark:border-x-4 dark:rounded-3xl dark:border-lime-200/35 ">
       <img src="https://via.placeholder.com/400" alt="Card Image" className="w-full mb-4  rounded-t-lg " />
       <h2 className="text-xl font-semibold mb-4">Project Name</h2>
-      <p className="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit Eligendi suscipit quia illo quo at ad</p>
+      <p className="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit Eligendi suscipit quia illo quo at ad</p>
       
       <div className=" grid grid-cols-2 justify-items-center items-end">
       <Link href="/Projects"> 
