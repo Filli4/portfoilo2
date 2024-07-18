@@ -12,7 +12,7 @@ function Navbar() {
   };
 
   return (
-    <div className="flex items-center justify-between p-4 dark:bg-black-500 flex-wrap">
+    <div suppressHydrationWarning className="flex items-center justify-between p-4 dark:bg-black-500 flex-wrap">
       <img src="https://pbs.twimg.com/profile_images/2606587238/8pnalgsjrr2k8p5jmbhy_200x200.png" alt="logo" className="h-12 w-12 rounded-full" />
       
       <button
@@ -20,7 +20,7 @@ function Navbar() {
         onClick={toggleMenu}
       >
         {isMenuOpen ? (
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+          <svg className='ml-11 ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
             <path fillRule="evenodd" clipRule="evenodd" d="M18.364 5.636a1 1 0 010 1.414L13.414 12l4.95 4.95a1 1 0 01-1.414 1.414L12 13.414l-4.95 4.95a1 1 0 01-1.414-1.414L10.586 12 5.636 7.05a1 1 0 011.414-1.414L12 10.586l4.95-4.95a1 1 0 011.414 0z"></path>
           </svg>
         ) : (
@@ -29,13 +29,13 @@ function Navbar() {
           </svg>
         )}
       </button>
-      <nav className={`flex-col sm:flex sm:flex-row sm:items-center gap-4 ${isMenuOpen ? 'flex' : 'hidden'} sm:flex`}>
-        <Link href="/" className="text-gray-800 dark:text-gray-50 dark:hover:bg-blue-400 dark:hover:p-2 dark:hover:rounded-lg dark:hover:transition-none hover:text-blue-600 ">Home</Link>
-        <Link href="/Projects" className="text-gray-800 dark:text-gray-50  dark:hover:bg-blue-400 dark:hover:p-2 dark:hover:rounded-lg hover:text-blue-600 transition duration-300">Projects</Link>
-        <Link href="/About" className="text-gray-800 dark:text-gray-50 dark:hover:bg-blue-400 dark:hover:p-2 dark:hover:rounded-lg hover:text-blue-600 transition duration-300">About Me</Link>
-        <Link href="/Skills" className="text-gray-800 dark:text-white dark:hover:bg-blue-400 dark:hover:p-2 dark:hover:rounded-lg hover:text-blue-600 transition duration-300">Skills</Link>
-        <button
-        className="p-2 rounded-full transition duration-300  items-center "
+      <nav className={`flex-col sm:flex sm:flex-row sm:items-center gap-4 ${isMenuOpen ? 'flex' : 'hidden'} sm:flex ` }>
+        <Link href="/" className="text-gray-800 dark:text-gray-50 dark:hover:bg-blue-400 dark:hover:p-2 dark:hover:rounded-lg  hover:text-blue-600 ">Home</Link>
+        <Link href="/Projects" className="text-gray-800 dark:text-gray-50  dark:hover:bg-blue-400 dark:hover:p-2 dark:hover:rounded-lg hover:text-blue-600  ">Projects</Link>
+        <Link href="/About" className="text-gray-800 dark:text-gray-50 dark:hover:bg-blue-400 dark:hover:p-2 dark:hover:rounded-lg hover:text-blue-600  ">About Me</Link>
+        <Link href="/Skills" className="text-gray-800 dark:text-white dark:hover:bg-blue-400 dark:hover:p-2 dark:hover:rounded-lg hover:text-blue-600 ">Skills</Link>
+        <button 
+        className=" rounded-sm duration-300 items-center "
         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       >
         {theme === 'dark' ? (

@@ -1,4 +1,4 @@
-
+/* 
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from 'next-themes';
@@ -23,44 +23,27 @@ export default function RootLayout({ children }) {
   );
 }
 
-/* import { Inter } from "next/font/google";
+ */
+import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Nav";
+import { ThemeProvider } from 'next-themes';
+import InnerLayout from "@/app/InnerLayout";
 
-import { ThemeProvider } from "next-themes";
-import {ThemeContext} from 'react'
-import {useContext} from 'react'
-
-import { useTheme } from 'next-themes';
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Filmon-Portfolio",
   description: "My portfolio",
 };
 
-const inter = Inter({ subsets: ["latin"] });
-
-
-
 export default function RootLayout({ children }) {
- 
-const{switchDark, switchLight, theme}= useContext(ThemeContext)
   return (
-    <html  lang="en">
+    <html lang="en" suppressHydrationWarning className={inter.className}>
       <body>
-        <ThemeProvider defaultTheme="system" attribute="class">
-
-        <Navbar/>
-        
-        {children}
-        <button 
-  onClick={theme=== 'dark'? switchLight:switchDark}
-  >
-    {theme ==='dark'? 'Light': 'Dark'}
-  </button>
+        <ThemeProvider attribute="class" defaultTheme="system">
+          <InnerLayout>{children}</InnerLayout>
         </ThemeProvider>
       </body>
     </html>
   );
 }
- */

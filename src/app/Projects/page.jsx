@@ -1,17 +1,30 @@
+/* import Footer from "@/components/Footer"; 
+import React from 'react';
+import Cards from "@/components/Cards";
+
+export default function Projects(params) {
+  return (
+    <div className="grid grid-rows-[auto-1dvh]">
+      <Cards />
+     
+        <Footer />
+      
+    </div>
+  );
+}
+ */
 import Footer from "@/components/Footer"; 
 import React from 'react';
-import Cards from "@/components/Cards"
+import Cards from "@/components/Cards";
 
-export default function About(params) {
-
-
-  return(
-    <div className="grid grid-rows-span-2 gap-7">
-    <Cards/>
-    <div className=" content-end  row-span-4 ">
-    <Footer />
-    </div>
+export default function Projects(params) {
+  return (
+    <div className=" grid grid-rows-1 lg:mt-24">
+     
+        <Cards />
     
+
+      <Footer home="home m-3 lg:mt-3" />
     </div>
-  )
+  );
 }
