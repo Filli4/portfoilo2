@@ -23,7 +23,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 450px;
+  width: 500px;
   background-color: rgba(255, 255, 255, 0.97); 
   padding: 20px;
   box-shadow: 0 10px 14px rgba(0, 0, 0, 0.1);
@@ -53,3 +53,10 @@
 .details button:hover {
   background-color: rgb(218, 27, 52);
 }
+
+@media screen and (min-width: 290px) and (max-width: 500px) {
+  .details {
+    width: calc(100% - 20px); /* Adjust this value as needed */
+  }
+}
+

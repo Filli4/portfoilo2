@@ -56,7 +56,7 @@ function Cards() {
             <button className="bg-blue-600 text-white px-4 py-2 rounded-full mt-4 hover:bg-blue-700 transition duration-300" onClick={() => toggleDetails(index)}>More Info</button>
             {showDetails[index] && (
               <div className={`popout-container  ${showDetails[index] ? 'active' : ''}`} onClick={() => toggleDetails(index)}>
-                <div className="details dark:bg-black dark:text-white dark:border-y-[3px] dark:rounded-3xl" onClick={(e) => e.stopPropagation()}>
+                <div className="details dark:bg-black  dark:text-white dark:border-y-[3px] dark:rounded-3xl" onClick={(e) => e.stopPropagation()}>
                   <img src={card.image} alt="Card Image" className="w-full mb-4 rounded-t-lg" />
                   <h2 className="text-xl font-semibold  mb-4">{card.title}</h2>
                   <p className="text-gray-600 dark:text-gray-300 mb-4">{card.more} </p>

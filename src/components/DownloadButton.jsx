@@ -1,28 +1,40 @@
-
-"use client"; 
+"use client";
 import React from 'react';
-import About from '@/app/About/page';
 
 const DownloadButton = () => {
   
-  const HandleDownload = () => {
-    const fileURL = '/dark-mode-6682.png'; 
-    const link = document.createElement('a');
-    link.href = fileURL;
-    link.download = 'CV';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const pdf1 = "/Filmon_CV_no_3.docx.pdf";
+  const pdf2 = "/personlig_brev_no_3.pdf";
+
+  
+  const handleDownload = () => {
+    
+    const files = [
+      { url: pdf1, name: 'Filmon_CV.pdf' },
+      { url: pdf2, name: 'personlig_brev.pdf' }
+    ];
+
+  
+    files.forEach(file => {
+      const link = document.createElement('a');
+      link.href = file.url;
+      link.download = file.name; 
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
   };
 
   return (
-    <>
-    
-    <button className="bg-blue-600 w-40 text-white rounded-xl p-3 hover:bg-blue-700" onClick={HandleDownload}>
-      Download
-      
-    </button></>
+    <button
+      className="bg-blue-600 w-40 text-white rounded-xl p-3 hover:bg-blue-700"
+      onClick={handleDownload}
+    >
+      Download Documents
+    </button>
   );
 };
 
 export default DownloadButton;
+
+

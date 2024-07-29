@@ -48,10 +48,17 @@ export default function About() {
   return (
     <div className=" grid grid-cols-1  justify-center items-center   dark:bg-black">
       <div className='flex justify-center mt-12 items-center border-red-300 border-b-2 mx-2 rounded-2xl flex-col sm:flex-row sm:justify-between '>
-        <p className="text-lg w-64 text-gray-800 lg:ml-36 dark:text-white/70 p-2">
-          Currently I&apos;m a student studying FrontEnd at <b>Chasacademy</b> school. I like React and would like to learn more about it.
+        <p className="text-lg  text-gray-800 m-10 lg:w-[700px] dark:text-white/70 p-2">
+        I&apos;m really excited about diving deeper into React and getting a better handle on this awesome library. I also want to learn how to use React with Next.js to make the most of both. My aim is to boost my skills and use them to build cool and dynamic web apps.
         </p>
-        <img src="https://via.placeholder.com/800" alt="placeholder" className="w-72 sm:w-80 md:w-96 lg:mr-36 rounded-2xl m-2 flex-wrap flex" />
+
+        <Image 
+        src="/face2.jpg" 
+        alt="placeholder" 
+        width={500} 
+        height={200} 
+        className="w-60 sm:w-72 md:w-96 lg:mr-36 m-4 rounded-xl" 
+      />
       </div>
       <div className="w-fit justify-center items-center rounded-xl flex flex-col m-4 dark:border-y-2 border-blue-500 p-2">
         <Image 
