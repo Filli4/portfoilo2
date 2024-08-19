@@ -3,15 +3,15 @@ import React from 'react';
 
 const DownloadButton = () => {
   
-  const pdf1 = "/Filmon_CV_no_3.docx.pdf";
-  const pdf2 = "/personlig_brev_no_3.pdf";
+  const pdf1 = "/Filmon Elias - CV.docx.pdf";
+  const pdf2 = "/Filmon Elias - personbrev.pdf";
 
   
   const handleDownload = () => {
     
     const files = [
-      { url: pdf1, name: 'Filmon_CV.pdf' },
-      { url: pdf2, name: 'personlig_brev.pdf' }
+      { url: pdf1, name: 'Filmon Elias - CV.pdf' },
+      { url: pdf2, name: 'Filmon Elias - personbrev.pdf' }
     ];
 
   
