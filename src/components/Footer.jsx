@@ -1,4 +1,6 @@
-"use client";
+
+
+import Link from "next/link";
 
 function Footer({home}) {
   return (
@@ -10,8 +12,8 @@ function Footer({home}) {
           className="h-12 w-12 rounded-xl hidden sm:block"
         />
       <div className="flex items-center ">
-        <a href="https://github.com/Filmonayele" className="hover:bg-gray-400 rounded-lg p-2">GitHub</a>
-        <a href="https://linkedin.com/in/filmonayele" className="hover:bg-blue-400 rounded-lg p-2">LinkedIn</a>
+        <Link href="https://github.com/Filli4" className="hover:bg-gray-500 rounded-lg p-2">GitHub</Link>
+        <Link href="https://www.linkedin.com/in/filmon-elias-388b341a0/" className="hover:bg-blue-400 rounded-lg p-2">LinkedIn</Link>
       </div>
     </div>
   );

@@ -51,7 +51,7 @@ function Cards() {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 mb-4 mx-2 xl:grid-cols-4">
       {cardData.map((card, index) => (
         <div key={index} className="bg-white dark:bg-gray-800 dark:border-x-2 dark:shadow-emerald-700 dark:shadow-l dark:rounded-3xl dark:border-lime-200/35 rounded-lg shadow-md p-4 grid grid-rows-1 content-center">
-         <div className="place-content-center"> <Image 
+         <div className="place-content-center flex justify-center items-center"> <Image 
             src={card.image2 ? card.image2 : card.image} 
             alt="Card Image" 
             width={400} 
@@ -64,7 +64,7 @@ function Cards() {
             <button className="bg-blue-600 text-white px-4 py-2 rounded-full mt-4 hover:bg-blue-700 transition duration-300" onClick={() => toggleDetails(index)}>More Info</button>
             {showDetails[index] && (
               <div className={`fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50 transition-opacity duration-600 ease-in-out ${showDetails[index] ? 'visible opacity-100' : 'invisible opacity-0'}`} onClick={() => toggleDetails(index)}>
-                 <div className="overflow-y-auto dark:bg-black dark:text-white dark:border-y-[3px] dark:rounded-3xl p-4 bg-white bg-opacity-95 rounded-lg max-h-[80vh] w-4/5 sm:w-3/4 lg:w-2/3 xl:w-1/2" onClick={(e) => e.stopPropagation()}>
+                 <div className="overflow-y-auto scroll-m-1 dark:bg-black dark:text-white dark:border-y-[3px] dark:rounded-3xl p-4 bg-white bg-opacity-95 rounded-lg max-h-[80vh] w-4/5 sm:w-3/4 lg:w-2/3 xl:w-1/2" onClick={(e) => e.stopPropagation()}>
                   <div className="grid place-items-center">
                     <Image 
                       src={card.image2 ? card.image2 : card.image} 
