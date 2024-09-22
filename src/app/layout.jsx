@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Filmon-Portfolio",
   description: "My portfolio",
+  openGraph:{
+
+  }
 };
 
 export default function RootLayout({ children }) {
