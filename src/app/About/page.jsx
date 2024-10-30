@@ -18,6 +18,7 @@ export default function About() {
         alt="placeholder" 
         width={500} 
         height={200} 
+        priority
         className="w-60 sm:w-72 md:w-96 lg:mr-36 m-4 rounded-xl" 
       />
       </div>

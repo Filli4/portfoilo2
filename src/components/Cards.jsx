@@ -22,12 +22,18 @@ const cardData = [
     title: "Movie Search",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit Eligendi suscipit quia illo quo at ad . . .",
     more:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil quas minima delectus nostrum corporis temporibus, possimus iste quae pariatur a.",
-    image: "/todo-list-icon.jpg",
-    image2:"/vfx-visual-effects-vanas.jpg",
+    image:"/vfx-visual-effects-vanas.jpg",
     link: "https://exam-movie-site-hsgp0tsta-filmons-projects-b17674df.vercel.app/"
   },
   {
-    title: "Project 4",
+    title: "Clothing Store",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit Eligendi suscipit quia illo quo at ad . . .",
+    more:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil quas minima delectus nostrum corporis temporibus, possimus iste quae pariatur a.",
+    image: "/clotheStore.png",
+    link: "https://e-handel-2.vercel.app/"
+  },
+  {
+    title: "Project 5",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit Eligendi suscipit quia illo quo at ad . . .",
     more:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil quas minima delectus nostrum corporis temporibus, possimus iste quae pariatur a.",
     image: "/svgviewer-png-output.png",
