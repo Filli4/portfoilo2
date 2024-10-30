@@ -19,12 +19,12 @@ const cardData = [
     link: "https://black-jack-rbe1bldvy-filmons-projects-b17674df.vercel.app/"
   },
   {
-    title: "Project 3",
+    title: "Movie Search",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit Eligendi suscipit quia illo quo at ad . . .",
     more:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil quas minima delectus nostrum corporis temporibus, possimus iste quae pariatur a.",
     image: "/todo-list-icon.jpg",
-    image2:"/comming.jpeg",
-    link: "https://todolist-redux-delta.vercel.app/"
+    image2:"/vfx-visual-effects-vanas.jpg",
+    link: "https://exam-movie-site-hsgp0tsta-filmons-projects-b17674df.vercel.app/"
   },
   {
     title: "Project 4",
