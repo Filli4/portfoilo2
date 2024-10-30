@@ -16,11 +16,13 @@ function Navbar() {
    suppressHydrationWarning
    className="flex items-center justify-between p-4 dark:bg-black-500 flex-wrap"
   >
-   <img
+   <Link href="/">
+    <img
     src="https://pbs.twimg.com/profile_images/2606587238/8pnalgsjrr2k8p5jmbhy_200x200.png"
     alt="logo"
     className="h-12 w-12 rounded-full"
-   />
+   /></Link>
+  
 
    <button
     className="sm:hidden rounded-full transition duration-300"
