@@ -16,7 +16,7 @@ const cardData = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit Eligendi suscipit quia illo quo at ad ...",
     more:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil quas minima delectus nostrum corporis temporibus, possimus iste quae pariatur a.",
     image: "/blackjack.jpg",
-    link: "https://black-jack-rbe1bldvy-filmons-projects-b17674df.vercel.app/"
+    link: "https://black-jack-exp.vercel.app/"
   },
   {
     title: "Movie Search",
