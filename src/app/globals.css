@@ -17,3 +17,14 @@ body {
     background-color: black;
     color: white;
 }
+
+
+
+
+.nav-link {
+  @apply text-gray-800 dark:text-white p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition;
+}
+
+.active-link {
+  @apply text-blue-500 font-semibold underline dark:text-blue-400;
+}

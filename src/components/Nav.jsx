@@ -1,130 +1,153 @@
 "use client";
+
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 
 function Navbar() {
- const { theme, setTheme } = useTheme();
- const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
+  const pathname = usePathname(); // Detect current route
 
- const toggleMenu = () => {
-  setIsMenuOpen(!isMenuOpen);
- };
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
- return (
-  <div
-   suppressHydrationWarning
-   className="flex items-center justify-between p-4 dark:bg-black-500 flex-wrap"
-  >
-   <Link href="/">
-    <img
-    src="https://pbs.twimg.com/profile_images/2606587238/8pnalgsjrr2k8p5jmbhy_200x200.png"
-    alt="logo"
-    className="h-12 w-12 rounded-full"
-   /></Link>
-  
+  // Close menu when clicking outside OR clicking the "X" in hamburger menu
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsMenuOpen(false); // Close menu if clicked outside
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
-   <button
-    className="sm:hidden rounded-full transition duration-300"
-    onClick={toggleMenu}
-   >
-    {isMenuOpen ? (
-     <svg
-      className="ml-11"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      width="24"
-      height="24"
-      fill="currentColor"
-     >
-      <path
-       fillRule="evenodd"
-       clipRule="evenodd"
-       d="M18.364 5.636a1 1 0 010 1.414L13.414 12l4.95 4.95a1 1 0 01-1.414 1.414L12 13.414l-4.95 4.95a1 1 0 01-1.414-1.414L10.586 12 5.636 7.05a1 1 0 011.414-1.414L12 10.586l4.95-4.95a1 1 0 011.414 0z"
-      ></path>
-     </svg>
-    ) : (
-     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      width="24"
-      height="24"
-      fill="currentColor"
-     >
-      <path
-       fillRule="evenodd"
-       clipRule="evenodd"
-       d="M4 5h16a1 1 0 110 2H4a1 1 0 010-2zm0 6h16a1 1 0 110 2H4a1 1 0 010-2zm0 6h16a1 1 0 110 2H4a1 1 0 010-2z"
-      ></path>
-     </svg>
-    )}
-   </button>
+  // Utility function to detect the active link
+  const isActive = (path) => pathname === path;
 
-   <nav
-    className={`flex-col sm:flex sm:flex-row sm:items-center gap-4 ${
-     isMenuOpen ? "flex" : "hidden"
-    } sm:flex`}
-   >
-    <Link
-     href="/"
-     className="text-gray-800 dark:text-white dark:hover:bg-blue-800 dark:hover:rounded-lg dark:p-2 hover:text-black hover:bg-blue-300  p-2 rounded-lg"
-    >
-     Home
-    </Link>
-    <Link
-     href="/Projects"
-     className="text-gray-800 dark:text-white dark:hover:bg-blue-800 dark:hover:rounded-lg dark:p-2 hover:text-black hover:bg-blue-300  p-2 rounded-lg"
-    >
-     Projects
-    </Link>
-    <Link
-     href="/About"
-     className="text-gray-800 dark:text-white dark:hover:bg-blue-800 dark:hover:rounded-lg dark:p-2 hover:text-black hover:bg-blue-300  p-2 rounded-lg"
-    >
-     About Me
-    </Link>
-    <Link
-     href="/Skills"
-     className="text-gray-800 dark:text-white dark:hover:bg-blue-800 dark:hover:rounded-lg dark:p-2  hover:bg-blue-300 p-2 rounded-lg"
-    >
-     Skills
-    </Link>
+  return (
+    <header className="flex items-center justify-between p-4 bg-white dark:bg-gray-950 shadow-md sticky top-0 z-50">
+      {/* Logo */}
+      <Link href="/" className="flex items-center space-x-2">
+        <img
+          src="https://pbs.twimg.com/profile_images/2606587238/8pnalgsjrr2k8p5jmbhy_200x200.png"
+          alt="logo"
+          className="h-10 w-10 rounded-full"
+        />
+        <span className="text-xl font-bold text-gray-800 dark:text-white">
+          Filmon
+        </span>
+      </Link>
 
-    <button
-     className="rounded-sm duration-300 items-center"
-     onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-    >
-     {theme === "dark" ? (
-      <div>
-       <svg
-        className="justify-center items-center"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="-15 -4 110 100"
-        width="34"
-        height="35"
-        fill="currentColor"
-       >
-        <path d="M45 68c-12.682 0-23-10.317-23-23 0-12.682 10.318-23 23-23 12.683 0 23 10.318 23 23 0 12.683-10.317 23-23 23zm0-40c-9.374 0-17 7.626-17 17s7.626 17 17 17 17-7.626 17-17-7.626-17-17-17zM45 17.556c-1.657 0-3-1.343-3-3V3c0-1.657 1.343-3 3-3s3 1.343 3 3v11.556c0 1.657-1.343 3-3 3zM45 90c-1.657 0-3-1.343-3-3V75.444c0-1.657 1.343-3 3-3s3 1.343 3 3V87c0 1.657-1.343 3-3 3zM14.556 48H3c-1.657 0-3-1.343-3-3s1.343-3 3-3h11.556c1.657 0 3 1.343 3 3s-1.343 3-3 3zM87 48H75.444c-1.657 0-3-1.343-3-3s1.343-3 3-3H87c1.657 0 3 1.343 3 3s-1.343 3-3 3zM66.527 26.473c-.768 0-1.535-.293-2.121-.878-1.172-1.172-1.172-3.071 0-4.243l8.171-8.171c1.172-1.172 3.07-1.171 4.242 0 1.172 1.172 1.172 3.071 0 4.243l-8.171 8.171c-.586.586-1.353.878-2.121.878zM15.302 77.698c-.768 0-1.536-.293-2.121-.879-1.172-1.171-1.172-3.071 0-4.242l8.171-8.171c1.171-1.172 3.071-1.172 4.242 0 1.172 1.171 1.172 3.071 0 4.242l-8.171 8.171c-.585.586-1.353.879-2.121.879zM23.473 26.473c-.768 0-1.536-.293-2.121-.878l-8.171-8.171c-1.172-1.172-1.172-3.071 0-4.243 1.172-1.172 3.072-1.171 4.243 0l8.171 8.171c1.172 1.172 1.172 3.071 0 4.243-.586.585-1.353.878-2.121.878zM74.698 77.698c-.768 0-1.535-.293-2.121-.879l-8.171-8.171c-1.172-1.171-1.172-3.071 0-4.242 1.172-1.172 3.07-1.172 4.242 0l8.171 8.171c1.172 1.171 1.172 3.071 0 4.242-.586.586-1.353.879-2.121.879z" />
-       </svg>
-      </div>
-     ) : (
-      <div>
-       <svg
-        className="justify-center items-center"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="-15 -4 110 100"
-        width="34"
-        height="35"
-        fill="currentColor"
-       >
-        <path d="M87.823 60.7c-.463-.423-1.142-.506-1.695-.214-15.834 8.398-35.266 2.812-44.232-12.718-8.966-15.53-4.09-35.149 11.101-44.665.531-.332.796-.963.661-1.574-.134-.612-.638-1.074-1.259-1.153-9.843-1.265-19.59.692-28.193 5.66C13.8 12.041 6.356 21.743 3.246 33.35S1.732 57.08 7.741 67.487c6.008 10.407 15.709 17.851 27.316 20.961C38.933 89.486 42.866 90 46.774 90c7.795 0 15.489-2.044 22.42-6.046 8.601-4.966 15.171-12.43 18.997-21.586.61-1.453-.238-2.12-.698-2.543z"></path>
-       </svg>
-      </div>
-     )}
-    </button>
-   </nav>
-  </div>
- );
+      {/* Hamburger Menu Button - Mobile View */}
+      <button
+        className="sm:hidden p-2 rounded-md text-gray-600 dark:text-white focus:outline-none hover:bg-gray-100 dark:hover:bg-gray-800"
+        onClick={toggleMenu}
+      >
+        {!isMenuOpen && (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M4 6h16M4 12h16M4 18h16"
+              stroke="currentColor"
+              strokeWidth="2"
+            />
+          </svg>
+        )}
+        {isMenuOpen && (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M6 18L18 6M6 6l12 12"
+              stroke="currentColor"
+              strokeWidth="2"
+            />
+          </svg>
+        )}
+      </button>
+
+      {/* Navbar Links - Desktop View */}
+      <nav
+        ref={menuRef}
+        className={`${
+          isMenuOpen ? "flex" : "hidden"
+        } sm:flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 absolute sm:static bg-white backdrop-blur-lg sm:bg-transparent w-full sm:w-auto top-16 sm:top-0 left-0 p-6 sm:p-0 shadow-lg rounded-b-3xl sm:shadow-none transition-all dark:bg-gray-950`}
+      >
+        <Link
+          href="/"
+          onClick={() => setIsMenuOpen(false)} // Close on link click
+          className={`nav-link ${isActive("/") ? "active-link" : ""}`}
+        >
+          Home
+        </Link>
+        <Link
+          href="/Projects"
+          onClick={() => setIsMenuOpen(false)} // Close on link click
+          className={`nav-link ${isActive("/Projects") ? "active-link" : ""}`}
+        >
+          Projects
+        </Link>
+        <Link
+          href="/About"
+          onClick={() => setIsMenuOpen(false)} // Close on link click
+          className={`nav-link ${isActive("/About") ? "active-link" : ""}`}
+        >
+          About Me
+        </Link>
+        <Link
+          href="/Skills"
+          onClick={() => setIsMenuOpen(false)} // Close on link click
+          className={`nav-link ${isActive("/Skills") ? "active-link" : ""}`}
+        >
+          Skills
+        </Link>
+
+        {/* Theme Toggle */}
+        <button
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          className="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600 transition"
+        >
+          {theme === "dark" ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M17.36 17.36l1.42 1.42M2 12h2m16 0h2M4.22 19.78l1.42-1.42M17.36 6.64l1.42-1.42M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path d="M21.7 13A9 9 0 1111 2.3a7 7 0 0010.7 10.7z"></path>
+            </svg>
+          )}
+        </button>
+      </nav>
+    </header>
+  );
 }
 
 export default Navbar;
