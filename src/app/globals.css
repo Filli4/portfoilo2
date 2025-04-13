@@ -28,3 +28,20 @@ body {
 .active-link {
   @apply text-blue-500 font-semibold underline dark:text-blue-400;
 }
+
+@keyframes wave {
+  0% {
+    transform: translateY(100%) scaleX(1.2);
+  }
+  50% {
+    transform: translateY(-50%) scaleX(1);
+  }
+  100% {
+    transform: translateY(100%) scaleX(1.2);
+  }
+}
+
+.animate-wave {
+  animation: wave 25s ease-in-out infinite;
+}
+
